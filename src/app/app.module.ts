@@ -12,13 +12,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { CardListComponent } from './pages/card-list/card-list.component';
 import { PokecardComponent } from './pages/card-list/pokecard/pokecard.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     CardListComponent,
-    PokecardComponent
+    PokecardComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
