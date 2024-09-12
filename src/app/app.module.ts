@@ -10,9 +10,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { CardListComponent } from './pages/card-list/card-list.component';
 import { PokecardComponent } from './pages/card-list/pokecard/pokecard.component';
 import { HeaderComponent } from './components/header/header.component';
+import { PaginatorComponent } from './components/paginator/paginator.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { HeaderComponent } from './components/header/header.component';
     MainComponent,
     CardListComponent,
     PokecardComponent,
-    HeaderComponent
+    HeaderComponent,
+    PaginatorComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { HeaderComponent } from './components/header/header.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatPaginatorModule
   ],
   providers: [
     provideAnimationsAsync()
