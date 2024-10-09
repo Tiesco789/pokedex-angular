@@ -1,29 +1,31 @@
-import { NgModule } from '@angular/core';
+import { Input, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { MainComponent } from './pages/main/main.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { CardListComponent } from './pages/card-list/card-list.component';
-import { PokecardComponent } from './pages/card-list/pokecard/pokecard.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PaginatorComponent } from './components/paginator/paginator.component';
+import { CardListComponent } from './pages/card-list/card-list.component';
+import { PokemoncardComponent } from './pages/card-list/pokecard/pokecard.component';
+import { MainComponent } from './pages/main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     CardListComponent,
-    PokecardComponent,
     HeaderComponent,
-    PaginatorComponent
+    PaginatorComponent,
+    PokemoncardComponent,
+    CardListComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,10 @@ import { PaginatorComponent } from './components/paginator/paginator.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    HttpClientModule,
+    MatPaginatorModule,
+    
   ],
   providers: [
     provideAnimationsAsync()

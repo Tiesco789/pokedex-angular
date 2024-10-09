@@ -1,2 +1,3 @@
-<h3>Lista de pokemons</h3>
-<app-pokecard></app-pokecard>
+<div class="card-list">
+  <app-pokecard *ngFor="let pokemon of pokemons" [pokemon]="pokemon"></app-pokecard>
+</div>
