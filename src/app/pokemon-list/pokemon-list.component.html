@@ -1,14 +1,19 @@
-<div *ngFor="let pokemon of pokemons" class="pokemon-card">
-  <div>
-    <h2>{{ pokemon.id }} - {{ pokemon.name | titlecase }}</h2>
-    <img [src]="pokemon.sprites.front_default" [alt]="pokemon.name">
+<div *ngFor="let pokemon of pokemons" class="pokemon-card" class="container">
+  <div class="cards">
+    <div class="card">
+      <h2>{{ pokemon.id }}</h2>
+      <img [src]="pokemon.sprites.front_default" [alt]="pokemon.name">
 
-    <p><strong>Altura:</strong> {{ pokemon.height / 10 }} m</p>
+      <p>{{ pokemon.name | titlecase }}</p>
+      <p><strong>Tipos: </strong>
+        <span *ngFor="let type of pokemon.types">{{ type.type.name | titlecase }} </span>
+      </p>
+
+    </div>
+
+    <!-- <p><strong>Altura:</strong> {{ pokemon.height / 10 }} m</p>
     <p><strong>Peso:</strong> {{ pokemon.weight / 10 }} kg</p>
 
-    <p><strong>Tipos: </strong>
-      <span *ngFor="let type of pokemon.types">{{ type.type.name | titlecase }} </span>
-    </p>
 
     <p><strong>Habilidades: </strong>
       <span *ngFor="let ability of pokemon.abilities">{{ ability.ability.name | titlecase }} </span>
@@ -30,11 +35,11 @@
 
     <p><strong>Linha Evolutiva:</strong></p>
     <div class="evolution-container">
-     <div *ngFor="let evo of pokemon.evolutions" class="evolution-stage">
+      <div *ngFor="let evo of pokemon.evolutions" class="evolution-stage">
         <img [src]="evo.sprite" [alt]="evo.name">
         <p>{{ evo.name | titlecase }}</p>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 
