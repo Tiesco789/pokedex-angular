@@ -1,59 +1,72 @@
-# PokedexAngular
+# Pokémon List Project
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.5.
+## 📌 Descrição
+Este projeto é uma aplicação Angular que consome a API da PokéAPI para exibir uma lista de Pokémon. Cada Pokémon listado inclui detalhes como nome, imagem e sua cadeia de evolução.
 
-## Development server
+## 🚀 Tecnologias Utilizadas
+- **Angular** (Framework para desenvolvimento frontend)
+- **TypeScript** (Linguagem utilizada no desenvolvimento)
+- **PokéAPI** (API pública para obtenção de dados sobre Pokémon)
+- **SCSS** (Estilização do projeto)
 
-To start a local development server, run:
-
-```bash
-ng serve
+## Estrutura do Projeto
+```
+📦 src/
+ ┣ 📂 app/
+ ┃ ┣ 📂 pokemon-list/  # Componente responsável por exibir a lista de Pokémon
+ ┃ ┣ 📂 services/
+ ┃ ┃ ┗ pokemon.service.ts  # Serviço responsável por consumir a API
+ ┃ ┗ app.module.ts  # Módulo principal do Angular
+ ┣ 📂 assets/  # Recursos estáticos como imagens e ícones
+ ┣ index.html  # Arquivo principal da aplicação
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 📜 Funcionalidades
+✅ Paginação para exibir diferentes Pokémon por página  
+✅ Consulta de detalhes dos Pokémon  
+✅ Recuperação e exibição da cadeia de evolução  
+✅ Tratamento de erros para chamadas à API
 
-## Code scaffolding
+## 📡 Consumo da API
+A aplicação utiliza os seguintes endpoints da PokéAPI:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Lista de Pokémon:** `https://pokeapi.co/api/v2/pokemon?limit={limit}&offset={offset}`
+- **Detalhes de um Pokémon:** `https://pokeapi.co/api/v2/pokemon/{id}`
+- **Espécie de um Pokémon:** `https://pokeapi.co/api/v2/pokemon-species/{id}`
+- **Cadeia de Evolução:** `https://pokeapi.co/api/v2/evolution-chain/{id}`
 
-```bash
-ng generate component component-name
-```
+## 🔧 Instalação e Execução
+1. Clone este repositório:
+   ```sh
+   git clone https://github.com/Tiesco789/pokedex-angular.git
+   cd pokemon-list
+   ```
+2. Instale as dependências:
+   ```sh
+   npm install
+   ```
+3. Execute o projeto:
+   ```sh
+   ng serve
+   ```
+4. Acesse no navegador:  
+   ```
+   http://localhost:4200
+   ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 📌 Uso
+- Navegue entre as páginas para visualizar diferentes Pokémon.
+- Clique em um Pokémon para ver seus detalhes e evolução.
+- Utilize os controles de paginação para navegar entre os resultados.
 
-```bash
-ng generate --help
-```
+## 🛠 Melhorias Futuras
+- Implementação de um sistema de busca por nome.
+- Melhorias na UI/UX utilizando Angular Material.
+- Adição de animações para tornar a interface mais dinâmica.
 
-## Building
+## 📄 Licença
+Este projeto é open-source e está disponível sob a licença MIT.
 
-To build the project run:
+---
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Feito com ❤️ e muito café! ☕
