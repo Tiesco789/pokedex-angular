@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Pokemon, PokemonService } from '../services/pokemon.service';
-
 @Component({
   selector: 'app-pokemon-list',
   standalone: false,
@@ -93,10 +92,10 @@ export class PokemonListComponent implements OnInit {
   extractEvolutionData(evolutionData: any): { name: string; sprite: string }[] {
     const evolutionChain: { name: string; sprite: string }[] = [];
 
-  /**
-   * Recursively processes the evolution chain to extract evolution details.
-   * @param chain - The current evolution stage in the chain.
-   */
+    /**
+     * Recursively processes the evolution chain to extract evolution details.
+     * @param chain - The current evolution stage in the chain.
+     */
     const processChain = (chain: any): void => {
       evolutionChain.push(this.createEvolutionEntry(chain.species));
       chain.evolves_to.forEach(processChain);
@@ -105,7 +104,6 @@ export class PokemonListComponent implements OnInit {
     processChain(evolutionData.chain);
     return evolutionChain;
   }
-
 
   /**
    * Creates an entry for a Pokémon in the evolution chain.
